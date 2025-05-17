@@ -6,10 +6,14 @@
 
 <div id="blogs">
   <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
+    <div class="card mb-3">
+      <div class="card-body">
+        <%= render blog %>
+        <p>
+          <%= link_to "Show this blog", blog %>
+        </p>
+      </div>
+    </div>
   <% end %>
 </div>
 
