@@ -10,25 +10,18 @@ export default class extends Controller {
   }
 
   connect() {
-    if (this.hasEditorTarget) {
-      this.change()
-      this.togglePreview()
-    } else {
-      this.show()
+    if (this.hasJsonValue) {
+      const markdown = JSON.parse(this.jsonValue)
+      this.#renderPreview(markdown)
     }
-  }
-
-  change() {
-    this.#renderPreview(this.editorTarget.value)
-  }
-
-  show() {
-    const markdown = JSON.parse(this.jsonValue)
-    this.#renderPreview(markdown)
   }
 
   togglePreview() {
     const isPreviewMode = this.previewSwitchTarget.checked
+    if (isPreviewMode) {
+      const markdown = this.editorTarget.value
+      this.#renderPreview(markdown)
+    }
     this.editorTarget.classList.toggle("d-none", isPreviewMode)
     this.previewTarget.classList.toggle("d-none", !isPreviewMode)
   }

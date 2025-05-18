@@ -22,7 +22,7 @@
       <input type="checkbox" data-markdown-target="previewSwitch" data-action="markdown#togglePreview">
       Preview
     </label>
-    <%= form.text_area :content, rows: 10, class: "d-none form-control", data: { action: "markdown#change", markdown_target: "editor" } %>
+    <%= form.text_area :content, rows: 10, class: "form-control", data: { markdown_target: "editor" } %>
     <div data-markdown-target="preview" class="d-none"></div>
   </div>
 
