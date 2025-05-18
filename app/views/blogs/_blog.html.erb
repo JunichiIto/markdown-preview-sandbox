@@ -3,6 +3,8 @@
     <%= blog.title %>
   </h2>
 
-  <%= simple_format(blog.content) %>
+  <div data-controller="markdown" data-markdown-json-value="<%= blog.content.to_json %>">
+    <div data-markdown-target="preview"></div>
+  </div>
 
 </div>

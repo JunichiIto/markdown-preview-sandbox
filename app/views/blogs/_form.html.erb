@@ -16,9 +16,14 @@
     <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="mb-3">
+  <div class="mb-3" data-controller="markdown">
     <%= form.label :content, class: "form-label" %>
-    <%= form.textarea :content, rows: 10, class: "form-control" %>
+    <label class="ms-2">
+      <input type="checkbox" data-markdown-target="previewSwitch" data-action="markdown#togglePreview">
+      Preview
+    </label>
+    <%= form.text_area :content, rows: 10, class: "form-control", data: { markdown_target: "editor" } %>
+    <div data-markdown-target="preview" class="d-none"></div>
   </div>
 
   <div>
