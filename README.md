@@ -1,24 +1,24 @@
-# README
+# markdown-preview-sandbox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implement markdown preview function with Stimulus.
 
-Things you may want to cover:
+![markdown.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/7465/ed4d0457-0fec-43a4-84ed-1e3aba3ab43c.gif)
 
-* Ruby version
+## How to setup
 
-* System dependencies
+```
+bin/setup
+bin/rails db:seed
+```
 
-* Configuration
+## How to run
 
-* Database creation
+```
+bin/dev
+```
 
-* Database initialization
+Then, open http://localhost:3000/
 
-* How to run the test suite
+## License
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+MIT license.
